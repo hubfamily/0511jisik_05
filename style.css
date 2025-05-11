@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #1b4de4;
+    --secondary-color: #f7f7f7;
+    --text-color: #2b2b2b;
+    --gray-color: #757575;
+    --border-color: #e5e5e5;
+    --card-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.search-box i {
+    color: var(--gray-color);
+    margin-right: 0.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1642c5;
+}
+
+/* Main Content Styles */
+main {
+    display: none;
+    padding: 2rem 0;
+}
+
+main.active {
+    display: block;
+}
+
+.current-weather {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.location-info {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+}
+
+.location-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.location-info p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.weather-card {
+    padding: 2rem;
+}
+
+.primary-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.temp-container {
+    text-align: center;
+}
+
+.temp-container h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.condition-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.condition-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.condition-container p {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    width: 24px;
+    text-align: center;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-info .label {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.detail-info span:last-child {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 0;
+    }
+
+    header {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .weather-card {
+        padding: 1rem;
+    }
+
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+
+    .temp-container h2 {
+        font-size: 3rem;
+    }
+}

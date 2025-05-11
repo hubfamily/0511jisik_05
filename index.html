@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <h1>Weather Forecast</h1>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="도시 검색...">
+                </div>
+                <button id="searchButton">검색</button>
+            </div>
+        </header>
+
+        <main id="weatherContainer">
+            <div class="current-weather">
+                <div class="location-info">
+                    <h2 id="locationName"></h2>
+                    <p id="localTime"></p>
+                </div>
+                
+                <div class="weather-card">
+                    <div class="primary-info">
+                        <div class="temp-container">
+                            <h2 id="temperature"></h2>
+                            <div class="condition-container">
+                                <img id="weatherIcon" src="" alt="날씨 아이콘">
+                                <p id="condition"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-temperature-low"></i>
+                            <div class="detail-info">
+                                <span class="label">체감온도</span>
+                                <span id="feelslike"></span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <div class="detail-info">
+                                <span class="label">습도</span>
+                                <span id="humidity"></span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <div class="detail-info">
+                                <span class="label">풍속</span>
+                                <span id="wind"></span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cloud-rain"></i>
+                            <div class="detail-info">
+                                <span class="label">강수량</span>
+                                <span id="precip"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
